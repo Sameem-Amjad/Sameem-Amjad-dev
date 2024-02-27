@@ -1,0 +1,22 @@
+/* MyComponent.module.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+
+
+@keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .gradient_text {
+      font-weight: bolder;
+      /* font-family: 'Metal Mania', cursive; */
+      
+      background: linear-gradient(to right,white, #4b0082, #ff69b4, #00ffff);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientAnimation 5s linear infinite;
+    }

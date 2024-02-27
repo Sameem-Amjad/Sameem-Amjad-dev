@@ -1,0 +1,128 @@
+
+.container {
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: 10%; */
+
+}
+
+.circle {
+  background: linear-gradient(to top, rgba(0, 159, 146, 0.6), #4b0082);
+
+
+  position: relative;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  /* border: 2px solid white; */
+  box-shadow: 0 0 20px rgba(0, 159, 146, 0.6);
+  
+  animation: circleAnimation 1000ms ease-in-out infinite alternate;
+   
+
+}
+.img{
+  margin-top: 20px;
+  margin-left: 26px;
+  height: 300px;
+  width: 300px;
+  border-bottom: rgb(100, 99, 180) solid 2px;
+  border-width: 0px 0px  10px 0px;
+  border-radius: 100px;
+  
+ /* transform: rotate3d(0, 1, 0, 60deg); */
+}
+
+@keyframes circleAnimation {
+  0% {
+    box-shadow: 0 0 20px rgba(0, 159, 146, 0.6);
+
+    transform: translateY(-5px);
+  }
+  100% {
+    box-shadow: 0 0 40px rgba(0, 159, 146, 0.6);
+    transform: translateY(5px);
+  }
+}
+
+.bubbles {
+
+  position: absolute;
+  top:25%;
+  left:48%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+}
+
+.bubble {
+  background: linear-gradient(to bottom, #4b0082, #ff69b4);
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+  animation: circleAnimation 1000ms ease-in-out infinite alternate;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  /* border: 2px solid white; */
+  /* background-color: rgba(255, 255, 255, 0.3); */
+  animation: bubbleAnimation 1500ms linear infinite;
+}
+
+@keyframes bubbleAnimation {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200px) scale(0.3);
+    opacity: 0;
+  }
+}
+/* Media Query for Small Screen Size */
+@media (max-width: 767px) {
+  .circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .bubbles {
+    width: 150px;
+    height: 150px;
+  }
+
+  .bubble {
+    width: 20px;
+    height: 20px;
+  }
+  .img{
+    height: 300px;
+    width: 300px;
+  }
+}
+
+/* Media Query for Medium Screen Size */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .circle {
+    width: 350px;
+    height: 350px;
+  }
+
+  .bubbles {
+    width: 180px;
+    height: 180px;
+  }
+
+  .bubble {
+    width: 25px;
+    height: 25px;
+  }
+  .img{
+    height: 350px;
+    width: 350px;
+  }
+}
+
