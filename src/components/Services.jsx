@@ -6,6 +6,7 @@ import { fadeIn } from '../variants';
 // import social media icons from react-icon
 import { BsArrowUpRight } from 'react-icons/bs';
 import { Link } from 'react-scroll';
+import { useTheme} from '../utils/themeContext';
 
 const services = [
   {
@@ -29,10 +30,12 @@ const services = [
     link: 'Learn more'
   },
 ]
-const Services = () => {
+const Services = () =>
+{
+  const { isDarkMode, toggleDarkMode } = useTheme();
   return ( <section id='services' className='section'>
     <div className="container mx-auto">
-      <div className='flex flex-col lg:flex-row lg:bg-services lg:bg-no-repeat bg-contain mix-blend-lighten'>
+      <div className={` flex flex-col ${isDarkMode?'': 'lg:bg-services lg:bg-no-repeat bg-contain mix-blend-lighten'} lg:flex-row `}>
         {/* text */ }
         <motion.div
           variants={ fadeIn( 'right', 0.3 ) }

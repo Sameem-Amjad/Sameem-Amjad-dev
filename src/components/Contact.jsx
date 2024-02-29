@@ -1,10 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 // react animation library
 import { motion } from 'framer-motion';
 // import animation from variants.js file
 import { fadeIn } from '../variants';
 const Contact = () =>
 {
+  const [ email, setEmail ] = useState( '' );
+  const [ name, setName ] = useState( '' );
+  const [ message, setMessage ] = useState( '' );
+  const Submit = async () =>
+    {
+        setButton("Please wait ...")
+        if(email!=''){
+            const response = await fetch( 'https://nodemailersameem-amjad.onrender.com/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify( {
+                    to: email,
+                    subject: 'Contact',
+                    text: message,
+                } ),
+            } );
+
+            const result = await response.text();
+            if ( result )
+            {
+              setButton( "Successfully send Email" );
+            }
+        }
+        else
+        {
+          alert("Please fill this form") 
+        }
+        
+    };
   return (
     <section id='contact' className='py-24'>
       <div className="container mx-auto">
@@ -29,8 +60,8 @@ const Contact = () =>
               placeholder='Your Name' />
             <input type="text" className='bg-transparent border-b  outline-none w-full placeholder:text-white focus:boder-accent transition-all' typetext
               placeholder='Your Email' />
-            <textarea className='bg-transparent border-b py-2 outline-none w-full placeholder:text-white focus:boder-accent  transition-all resize-none mb-4' name="" id="" cols="30" rows="8" placeholder='Your message'></textarea>
-            <button className='btn btn-lg animate-pulse '>Send Message</button>
+            <textarea className='bg-transparent border-b py-2 outline-none w-full placeholder:text-white focus:boder-accent  transition-all resize-none mb-4' name="" id="" cols="30" rows="8" placeholder='Your message' onChange={(e)=>{setMessage(e.target.message)}}></textarea>
+            <button onClick={Submit} className='btn btn-lg animate-pulse '>Send Message</button>
           </motion.form>
 
         </div>

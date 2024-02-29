@@ -75,9 +75,9 @@ const Banner = () =>
 
   // useTypewriter function is used
   const [ typeEffect ] = useTypewriter( {
-    words: [ 'Developer', 'Designer', 'Youtuber' ],
+    words: [ 'Software Engineer', 'Designer', 'MERN Stack Developer','React-Native Developer' ],
     loop: {},
-    typeSpeed: 100,
+    typeSpeed: 50,
     deleteSpeed: 40,
 
   } );
