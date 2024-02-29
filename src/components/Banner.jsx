@@ -103,7 +103,7 @@ const Banner = () =>
             <motion.div variants={ fadeIn( 'up', 0.6 ) }
               initial='hidden' whileInView={ 'show' }
               viewport={ { once: false, amount: 0.7 } } className='flex mx-auto items-center max-w-max gap-x-6 mb-12 lg:mx-0'>
-              <Link to='contact'><button className='btn btn-lg font-secondary text-[18px] animate-pulse border-2 border-purple-400 focus:ring-2 focus:ring-purple-400'>Contact me</button></Link>
+              <Link to='contact'><button className='btn btn-lg font-secondary text-[18px] animate-pulse  focus:ring-purple-400'>Contact me</button></Link>
               <a href=''  rel="noopener noreferrer"  className='text-gradient btn-link font-secondary text-[18px] animate-pulse focus:ring-2 focus:ring-purple-400 '>My Portfolio</a>
             </motion.div>
             <motion.div variants={ fadeIn( 'up  ', 0.7 ) }

@@ -41,7 +41,7 @@ const Services = () => {
           className='flex-1  lg:bg-bottom  lg:mb-0 mb-12'>
           <h2 className='h2 text-accent mb-6'>What I Do.</h2>
           <h3 className='h3 max-w-[455px] mb-16' >I'm a Freelancer Front-end Developer with over 2 years experience.</h3>
-          <Link to='work'><button className='btn btn-sm animate-pulse border-2 border-purple-400 focus:ring-2 focus:ring-purple-400 '>See my work</button></Link>
+          <Link to='work'><button className='btn btn-sm animate-pulse  focus:ring-purple-400 '>See my work</button></Link>
           </motion.div>
         {/* Services */ }
         <motion.div className='flex-1'

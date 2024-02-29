@@ -30,7 +30,7 @@ const Contact = () =>
             <input type="text" className='bg-transparent border-b  outline-none w-full placeholder:text-white focus:boder-accent transition-all' typetext
               placeholder='Your Email' />
             <textarea className='bg-transparent border-b py-2 outline-none w-full placeholder:text-white focus:boder-accent  transition-all resize-none mb-4' name="" id="" cols="30" rows="8" placeholder='Your message'></textarea>
-            <button className='btn btn-lg animate-pulse border-2 focus:ring-2 focus:ring-purple-400'>Send Message</button>
+            <button className='btn btn-lg animate-pulse '>Send Message</button>
           </motion.form>
 
         </div>
