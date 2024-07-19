@@ -99,7 +99,7 @@ const Banner = () =>
               <span >I am a {/* <TypeAnimation/> */ } <span className='text-accent '>{ typeEffect }</span></span>
             </motion.div>
             <motion.p variants={ fadeIn( 'up', 0.5 ) }
-              initial='hidden' whileInView={ 'show' } viewport={ { once: false, amount: 0.7 } } className='mb-8 max-w-lg mx-auto lg:mx-0'>Hey, I'm Sameem. I've more than 2 years of experience in Website & Mobile app development along with UI/UX Designing and have been serving the best quality products.  I'm a hard-working and dedicated person. and my first & top priority is my client satisfaction. Feel free to contact me, Cheers!</motion.p>
+              initial='hidden' whileInView={ 'show' } viewport={ { once: false, amount: 0.7 } } className='mb-8 max-w-lg mx-auto lg:mx-0'>Hey, I'm Sameem. I've more than 4 years of experience in Website & Mobile app development along with UI/UX Designing and have been serving the best quality products.  I'm a hard-working and dedicated person. and my first & top priority is my client satisfaction. Feel free to contact me, Cheers!</motion.p>
             <motion.div variants={ fadeIn( 'up', 0.6 ) }
               initial='hidden' whileInView={ 'show' }
               viewport={ { once: false, amount: 0.7 } } className='flex mx-auto items-center max-w-max gap-x-6 mb-12 lg:mx-0'>
